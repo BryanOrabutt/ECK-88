@@ -1,4 +1,4 @@
-update=9/22/2017 12:49:05 AM
+update=9/23/2017 10:04:14 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -74,9 +74,19 @@ LibName44=sockets
 LibName45=valves
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=schematic
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=C:/Users/Bryan Orabutt/Documents/KiCad/Libraries
+LibDir=C:/Users/Bryan Orabutt/Documents/KiCad/Libraries;Libraries
 [eeschema/libraries]
 LibName1=8088
 LibName2=ab2_7segment
@@ -142,13 +152,3 @@ LibName61=xilinx
 LibName62=r-us
 LibName63=Darlington
 LibName64=regulators
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=schematic
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
