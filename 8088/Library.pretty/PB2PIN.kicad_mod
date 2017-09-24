@@ -1,4 +1,4 @@
-(module PB2PIN (layer F.Cu) (tedit 59C721B2)
+(module PB2PIN (layer F.Cu) (tedit 59C724DA)
   (fp_text reference REF** (at -5.92 7.46) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
@@ -9,6 +9,6 @@
   (fp_line (start 5.08 -6.54) (end -7.92 -6.54) (layer F.SilkS) (width 0.3))
   (fp_line (start 5.08 6.46) (end -7.92 6.46) (layer F.SilkS) (width 0.3))
   (fp_line (start 5.08 -6.54) (end 5.08 6.46) (layer F.SilkS) (width 0.3))
-  (pad 1 thru_hole circle (at 5.08 2.76) (size 1.6 1.6) (drill 1.2) (layers *.Cu *.Mask))
+  (pad 2 thru_hole circle (at 5.08 2.76) (size 1.6 1.6) (drill 1.2) (layers *.Cu *.Mask))
   (pad 1 thru_hole circle (at 5.08 -2.54) (size 1.6 1.6) (drill 1.2) (layers *.Cu *.Mask))
 )
