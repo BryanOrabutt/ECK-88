@@ -1,36 +1,6 @@
 EESchema Schematic File Version 2
+LIBS:8088-rescue
 LIBS:8088
-LIBS:ab2_7segment
-LIBS:ab2_audio
-LIBS:ab2_buffer
-LIBS:ab2_capacitor
-LIBS:ab2_connectivity
-LIBS:ab2_dac
-LIBS:ab2_diode
-LIBS:ab2_gpio_expansion
-LIBS:ab2_header
-LIBS:ab2_idc
-LIBS:ab2_inductor
-LIBS:ab2_input_devices
-LIBS:ab2_jumper
-LIBS:ab2_lcd
-LIBS:ab2_led
-LIBS:ab2_memory
-LIBS:ab2_opamp
-LIBS:ab2_pot
-LIBS:ab2_power
-LIBS:ab2_regulator
-LIBS:ab2_relay
-LIBS:ab2_resistor
-LIBS:ab2_sensor
-LIBS:ab2_stepper
-LIBS:ab2_supply
-LIBS:ab2_terminal_block
-LIBS:ab2_test
-LIBS:ab2_transistor
-LIBS:ab2_uC
-LIBS:ab2_usb
-LIBS:ab2_xtal
 LIBS:74xx
 LIBS:adc-dac
 LIBS:analog_switches
@@ -145,7 +115,7 @@ F 3 "" H 7400 10900 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2114 U9
+L 2114-RESCUE-8088 U9
 U 1 1 59C4625B
 P 10150 11550
 F 0 "U9" H 10100 11700 60  0000 C CNN
@@ -156,7 +126,7 @@ F 3 "" H 9250 10950 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2114 U10
+L 2114-RESCUE-8088 U10
 U 1 1 59C462B2
 P 12400 11550
 F 0 "U10" H 12350 11700 60  0000 C CNN
@@ -2526,7 +2496,7 @@ F 3 "" V 20550 7800 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L 7805 U16
+L 7805-RESCUE-8088 U16
 U 1 1 59C7D17F
 P 19300 7650
 F 0 "U16" H 19450 7454 50  0000 C CNN
