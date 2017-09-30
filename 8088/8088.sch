@@ -1,6 +1,36 @@
 EESchema Schematic File Version 2
-LIBS:8088-rescue
 LIBS:8088
+LIBS:ab2_7segment
+LIBS:ab2_audio
+LIBS:ab2_buffer
+LIBS:ab2_capacitor
+LIBS:ab2_connectivity
+LIBS:ab2_dac
+LIBS:ab2_diode
+LIBS:ab2_gpio_expansion
+LIBS:ab2_header
+LIBS:ab2_idc
+LIBS:ab2_inductor
+LIBS:ab2_input_devices
+LIBS:ab2_jumper
+LIBS:ab2_lcd
+LIBS:ab2_led
+LIBS:ab2_memory
+LIBS:ab2_opamp
+LIBS:ab2_pot
+LIBS:ab2_power
+LIBS:ab2_regulator
+LIBS:ab2_relay
+LIBS:ab2_resistor
+LIBS:ab2_sensor
+LIBS:ab2_stepper
+LIBS:ab2_supply
+LIBS:ab2_terminal_block
+LIBS:ab2_test
+LIBS:ab2_transistor
+LIBS:ab2_uC
+LIBS:ab2_usb
+LIBS:ab2_xtal
 LIBS:74xx
 LIBS:adc-dac
 LIBS:analog_switches
@@ -68,17 +98,6 @@ F 1 "8155" H 11000 6350 60  0000 C CNN
 F 2 "Housings_DIP:DIP-40_W15.24mm_Socket" H 10250 5800 60  0001 C CNN
 F 3 "" H 10250 5800 60  0001 C CNN
 	1    11000 6350
-	1    0    0    -1  
-$EndComp
-$Comp
-L 8251A U5
-U 1 1 59C452F9
-P 12350 6150
-F 0 "U5" H 13200 6100 60  0000 C CNN
-F 1 "8251A" H 13200 6200 60  0000 C CNN
-F 2 "Housings_DIP:DIP-28_W15.24mm_Socket" H 11850 5750 60  0001 C CNN
-F 3 "" H 11850 5750 60  0001 C CNN
-	1    12350 6150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -174,22 +193,6 @@ NoConn ~ 6250 11150
 NoConn ~ 6250 11250
 NoConn ~ 6250 11350
 NoConn ~ 13850 6450
-$Comp
-L GND #PWR01
-U 1 1 59C4B0EE
-P 13950 5250
-F 0 "#PWR01" H 13950 5000 50  0001 C CNN
-F 1 "GND" H 13950 5100 50  0000 C CNN
-F 2 "" H 13950 5250 50  0000 C CNN
-F 3 "" H 13950 5250 50  0000 C CNN
-	1    13950 5250
-	0    -1   -1   0   
-$EndComp
-NoConn ~ 13850 5350
-NoConn ~ 13850 5650
-NoConn ~ 13850 5750
-NoConn ~ 13850 5850
-NoConn ~ 13850 5550
 $Comp
 L Crystal Y1
 U 1 1 59C4CC7C
@@ -1002,25 +1005,6 @@ F 3 "" H 7800 4850 50  0000 C CNN
 	1    7800 4850
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X02 P2
-U 1 1 59C994D5
-P 15250 7850
-F 0 "P2" H 15250 8000 50  0000 C CNN
-F 1 "CONN_01X02" V 15350 7850 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 15250 7850 50  0001 C CNN
-F 3 "" H 15250 7850 50  0000 C CNN
-	1    15250 7850
-	1    0    0    -1  
-$EndComp
-Text GLabel 9350 7200 3    60   Input ~ 0
-8755-CLK
-Text GLabel 9500 7200 3    60   Input ~ 0
-8755-READY
-Text GLabel 14900 7900 0    60   Input ~ 0
-8755-READY
-Text GLabel 14900 7800 0    60   Input ~ 0
-8755-CLK
 Entry Wire Line
 	9550 6000 9650 6100
 Entry Wire Line
@@ -3067,16 +3051,6 @@ Wire Wire Line
 	13900 7050 13900 7450
 Wire Wire Line
 	14000 6050 14000 7350
-Wire Wire Line
-	15050 7800 14900 7800
-Wire Wire Line
-	15050 7900 14900 7900
-Wire Wire Line
-	9350 6900 9500 6900
-Wire Wire Line
-	9500 6900 9500 7200
-Wire Wire Line
-	9350 7000 9350 7200
 Wire Bus Line
 	9650 6100 9650 6800
 Wire Wire Line
@@ -3114,7 +3088,7 @@ Wire Wire Line
 Wire Wire Line
 	9350 5100 9550 5100
 Wire Wire Line
-	13950 5250 13850 5250
+	13850 5250 14100 5250
 Wire Bus Line
 	11950 5700 11950 6400
 Wire Wire Line
@@ -3854,4 +3828,119 @@ Text Label 16000 5400 0    60   ~ 0
 4PC4
 Text Label 16000 5500 0    60   ~ 0
 4PC5
+$Comp
+L 8251A U5
+U 1 1 59C452F9
+P 12350 6150
+F 0 "U5" H 13200 6100 60  0000 C CNN
+F 1 "8251A" H 13200 6200 60  0000 C CNN
+F 2 "Housings_DIP:DIP-28_W15.24mm_Socket" H 11850 5750 60  0001 C CNN
+F 3 "" H 11850 5750 60  0001 C CNN
+	1    12350 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 5350 14100 5350
+Wire Wire Line
+	13850 5550 14100 5550
+Wire Wire Line
+	13850 5650 14100 5650
+Wire Wire Line
+	13850 5750 14100 5750
+Wire Wire Line
+	13850 5850 14100 5850
+$Comp
+L CONN_01X02 P?
+U 1 1 59D169E6
+P 4800 4150
+F 0 "P?" H 4800 4300 50  0000 C CNN
+F 1 "EXT_CLK" V 4900 4150 50  0000 C CNN
+F 2 "" H 4800 4150 50  0000 C CNN
+F 3 "" H 4800 4150 50  0000 C CNN
+	1    4800 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper_NO_Small JP?
+U 1 1 59D16C96
+P 4450 4300
+F 0 "JP?" H 4450 4380 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 4460 4240 50  0001 C CNN
+F 2 "" H 4450 4300 50  0000 C CNN
+F 3 "" H 4450 4300 50  0000 C CNN
+	1    4450 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 4200 4450 4200
+Wire Wire Line
+	4450 4400 4450 4950
+Wire Wire Line
+	4450 4950 4350 4950
+$Comp
+L GND #PWR?
+U 1 1 59D18875
+P 4550 4000
+F 0 "#PWR?" H 4550 3750 50  0001 C CNN
+F 1 "GND" H 4550 3850 50  0000 C CNN
+F 2 "" H 4550 4000 50  0000 C CNN
+F 3 "" H 4550 4000 50  0000 C CNN
+	1    4550 4000
+	-1   0    0    1   
+$EndComp
+Text Label 4600 4200 2    60   ~ 0
+ECLK
+Wire Wire Line
+	4600 4100 4550 4100
+Wire Wire Line
+	4550 4100 4550 4000
+Text Label 14100 5250 2    60   ~ 0
+~CTS
+Text Label 14100 5350 2    60   ~ 0
+~RTS
+Text Label 14100 5550 2    60   ~ 0
+~DSR
+Text Label 14100 5650 2    60   ~ 0
+~DTR
+Text Label 14100 5750 2    60   ~ 0
+RXRDY
+Text Label 14100 5850 2    60   ~ 0
+TXEMP
+NoConn ~ 9350 6900
+NoConn ~ 9350 7000
+$Comp
+L CONN_01X06 P?
+U 1 1 59D32665
+P 15800 7750
+F 0 "P?" H 15800 8100 50  0000 C CNN
+F 1 "CONN_01X06" V 15900 7750 50  0000 C CNN
+F 2 "" H 15800 7750 50  0000 C CNN
+F 3 "" H 15800 7750 50  0000 C CNN
+	1    15800 7750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	15550 7950 15550 8300
+Wire Wire Line
+	15650 7950 15650 8300
+Wire Wire Line
+	15750 7950 15750 8300
+Wire Wire Line
+	15850 7950 15850 8300
+Wire Wire Line
+	15950 7950 15950 8300
+Wire Wire Line
+	16050 7950 16050 8300
+Text Label 15550 8300 1    60   ~ 0
+~CTS
+Text Label 15650 8300 1    60   ~ 0
+~RTS
+Text Label 15750 8300 1    60   ~ 0
+~DSR
+Text Label 15850 8300 1    60   ~ 0
+~DTR
+Text Label 15950 8300 1    60   ~ 0
+RXRDY
+Text Label 16050 8300 1    60   ~ 0
+TXEMP
 $EndSCHEMATC
