@@ -1,6 +1,6 @@
 # ECK-88
 
-This project is an attempt to recreate the Intel EDK-88 development kit using KiCAD software to recreate the board and schematics. There are new additions, such as a pushbutton
+This project is an attempt to recreate the Intel ECK-88 development kit using KiCAD software to recreate the board and schematics. There are new additions, such as a pushbutton
 to single step the clock for demo purposes, and LEDs triggered by each of the address and data lines.
 
 ## Modification
