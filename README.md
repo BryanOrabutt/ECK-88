@@ -5,7 +5,8 @@ to aid in both educational and demonstrational use. These new additions are outl
 
     * Every address, data, and control signal is broken out to an IO header to allow for logic analyzer probing.
     * Every address, data, and most control signals are broken out to LEDs for use when single stepping.
-    * A clock select was added that allows selection between the main 4 Mhz clock, an external clock, and a debounced push button for single stepping.
+    * A clock select was added that allows selection between the main 4 Mhz clock, an external clock, and a debounced push button 
+      for single stepping.
     * All GPIO lines are broken out to headers (rather than no connect from the original ECK-88)
     * All chips are socketed to allow replacement and reprogramming with ease.
     * DC Barrel jack and LM7805 linear regulator added to allow wide range of power inputs.
