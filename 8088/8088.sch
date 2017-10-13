@@ -4280,4 +4280,5 @@ Connection ~ 20250 7600
 Wire Wire Line
 	20250 7900 20250 8000
 Connection ~ 20250 8000
+NoConn ~ 13850 5950
 $EndSCHEMATC
