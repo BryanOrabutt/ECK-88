@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-10-27T13:09:07</DateModified>
+  <DateModified>2017-10-27T14:23:24</DateModified>
   <ModuleName>mojo_top</ModuleName>
   <SummaryTimeStamp>2017-10-27T01:08:05</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Bryan Orabutt/Documents/Verilog Modules/PGM8755/iseconfig/mojo_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Bryan Orabutt/Documents/Verilog Modules/PGM8755\</ImplementationReportsDirectory>
+  <SavedFilePath>/home/lair/Documents/Bryan/ECK-88/PGM8755/iseconfig/mojo_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/lair/Documents/Bryan/ECK-88/PGM8755/</ImplementationReportsDirectory>
   <DateInitialized>2012-11-08T12:38:20</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

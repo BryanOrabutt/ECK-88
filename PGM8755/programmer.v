@@ -1,6 +1,5 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: SIUE
 // Engineer: Bryan Orabutt
 // 
 // Create Date:    	00:07:41 10/27/2017 
@@ -11,13 +10,12 @@
 // Description:  	Module to perform 8755 EPROM programming and verification
 //////////////////////////////////////////////////////////////////////////////////
 module programmer(input clk, rst, input [7:0] data_in, output reg rdy, data_latch, 
-				  addr_latch, output reg[10:0] addr_dat);
+				      output reg[10:0] addr_dat);
 				  
 	always@(posedge clk)begin
 		if(rst) begin
 			rdy <= 1'b0;
 			data_latch <= 1'b0;
-			addr_latch <= 1'b0;
 			addr_dat <= 11'b0;
 		end
 		else begin
