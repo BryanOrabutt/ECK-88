@@ -9,8 +9,15 @@
 // Target Devices: 	Spartan 3E Starter Board, Spartan 6 xc6slx9-2tqg144
 // Description:  	Module to perform 8755 EPROM programming and verification
 //////////////////////////////////////////////////////////////////////////////////
-module programmer(input clk, rst, input [7:0] data_in, output reg rdy, data_latch, 
-				      output reg[10:0] addr_dat);
+module programmer(input clk, rst, mode, en, input [7:0] data_in, output reg rdy, data_latch, 
+				  output reg[10:0] addr_dat);
+				  
+	localparam PROGRAM = 2'b01, VERIFY = 2'b10, IDLE = 2'b00;
+
+	reg[1:0] state;
+	wire delay_rdy;
+	
+	delay_cycles #(.WAIT_CYCLES(1000000)) (.clk(clk), .rst(rst), .rdy(delay_rdy));
 				  
 	always@(posedge clk)begin
 		if(rst) begin
@@ -26,4 +33,19 @@ module programmer(input clk, rst, input [7:0] data_in, output reg rdy, data_latc
 		end
 	end
 
+endmodule
+
+module delay_cycles(input clk, rst, output rdy);
+	parameter WAIT_CYCLES = 1000000;
+	parameter CTR_SIZE = $clog2(WAIT_CYCLES);
+	
+	reg[CTR_SIZE-1:0] counter;
+	
+	always@(posedge clk) begin
+		if(rst || counter > WAIT_CYCLES) counter <= 0;
+		else counter <= counter + 1;
+	end
+	
+	assign rdy = counter == WAIT_CYCLES;
+	
 endmodule

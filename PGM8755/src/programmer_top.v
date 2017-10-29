@@ -5,10 +5,10 @@
 // Design Name: 		PGM8755
 // Module Name:    	buffer
 // Project Name:   	PGM8755
-// Target Devices: 	Spartan 3E Starter Board, Spartan 6 xc6slx9-2tqg144
+// Target Devices: 	Spartan 3E Starter Board, Mojo board (Spartan 6 xc6slx9-2tqg144)
 // Description:  		Buffer to hold instruction bytes while EPROM is being programmed.
 //////////////////////////////////////////////////////////////////////////////////
-module mojo_top(input clk, rst_n, rx, output tx, prog_ce, vdd_25, vdd_5, output[7:0]led, output[10:0] address);
+module programmer_top(input clk, rst_n, rx, output tx, prog_ce, vdd_25, vdd_5, output[7:0]led, output[10:0] address);
 
 	wire rst = ~rst_n; // make reset active high
 
@@ -23,7 +23,8 @@ module mojo_top(input clk, rst_n, rx, output tx, prog_ce, vdd_25, vdd_5, output[
 	uart #(.CLK_RATE(50000000), .SERIAL_BAUD_RATE(115200)) host(.rst(rst), .rx(rx), .new_tx_data(new_tx_data), 
 		   .clk(clk), .tx_data(address[7:0]), .tx(tx), .new_rx_data(new_rx_data), .rx_data(rx_data), .busy(busy));
 		   
-	assign led = 8'b0;
+	assign led[0] = new_rx_data;
+	assign led[1] = new_tx_data;
 	assign vdd_5 = ~vdd_25;
 
 endmodule

@@ -7,7 +7,7 @@
 // Design Name: 	PGM8755
 // Module Name:		uart 
 // Project Name:   	PGM8755
-// Target Devices: 	Spartan 3E Starter Board, Spartan 6 xc6slx9-2tqg144
+// Target Devices: 	Spartan 3E Starter Board, Mojo board (Spartan 6 xc6slx9-2tqg144)
 // Description:  	UART to read data from host PC
 //////////////////////////////////////////////////////////////////////////////////
 module uart(input rst, rx, new_tx_data, clk, input[7:0] tx_data, output tx, busy,

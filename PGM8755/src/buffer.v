@@ -6,12 +6,12 @@
 // Design Name: 		PGM8755
 // Module Name:    	buffer
 // Project Name:   	PGM8755
-// Target Devices: 	Spartan 3E Starter Board, Spartan 6 xc6slx9-2tqg144
+// Target Devices: 	Spartan 3E Starter Board, Mojo board (Spartan 6 xc6slx9-2tqg144)
 // Description:  		Buffer to hold instruction bytes while EPROM is being programmed.
 //////////////////////////////////////////////////////////////////////////////////
 module buffer(input clk, dir, input[7:0] data_in, input[10:0] address, output reg[7:0] data_out);
 	
-	reg[7:0] blockram [2047:0]; //2048 x 8 = 16Kbit FIFO space
+	reg[7:0] blockram [2047:0]; //2048 x 8 = 16Kbit buffer space
 	
 	always@(posedge clk) begin
 		if(dir) data_out <= blockram[address];
