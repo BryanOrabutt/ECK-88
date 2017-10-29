@@ -1,6 +1,0 @@
-verilog work "src/serial_tx.v"
-verilog work "src/serial_rx.v"
-verilog work "uart.v"
-verilog work "programmer.v"
-verilog work "fifo.v"
-verilog work "src/mojo_top.v"

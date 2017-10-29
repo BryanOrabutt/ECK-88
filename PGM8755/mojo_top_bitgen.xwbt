@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Bryan Orabutt\Documents\Verilog Modules\PGM8755\mojo_top.ncd
-OUTFILE=C:\Users\Bryan Orabutt\Documents\Verilog Modules\PGM8755\mojo_top.bit
-FAMILY=Spartan6
-PART=xc6slx9-2tqg144
-WORKINGDIR=C:\Users\Bryan Orabutt\Documents\Verilog Modules\PGM8755
-LICENSE=WebPack
-USER_INFO=210818566_0_0_954
