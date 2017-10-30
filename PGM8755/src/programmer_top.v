@@ -12,7 +12,7 @@
 //			rst_n - low active reset button on board.
 //			rx - UART receive line
 //			mode - determines if FPGA is writing data or reading data. Should be
-//				connected to a toggle switch.
+//				connected to a toggle switch. 0 = Verify, 1 = Program
 //			en - enables/disables the programmer element. UART and Buffer reamin
 //				active. Use to write to buffer before enabling programmer.
 //				Connect this line to a toggle switch.
