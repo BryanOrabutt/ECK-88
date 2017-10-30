@@ -51,7 +51,7 @@ module programmer(input clk, rst, mode, en, tx_busy, input [7:0] data_in, output
 			/* If en is high, check mode to see if we are programming or verifying */
 			else if(state == IDLE && en) state <= (mode) ? PROGRAM:VERIFY;
 			/* If we are programming begin programming routine */
-			else if(state == PROGRAM) begin
+			else if(state == PROGRAM && en) begin
 				/* Check if we need to latch address or latch data */
 				if(addr_state) begin //latch address
 					ce <= 1'b0;
@@ -76,7 +76,7 @@ module programmer(input clk, rst, mode, en, tx_busy, input [7:0] data_in, output
 				end
 			end
 			/* If we are verifying, begin verify routine */
-			else if(state == VERIFY) begin
+			else if(state == VERIFY && en) begin
 				ce <= 1'b0; //remain in ce state for whole verify phase
 				if(~tx_state && ~tx_busy) begin //we are in ALE state
 					rdy <= 1'b0; //not ready to transmit data
@@ -92,6 +92,7 @@ module programmer(input clk, rst, mode, en, tx_busy, input [7:0] data_in, output
 					rdy <= 1'b1; //we are ready to transmit data.
 				end
 			end
+			else state <= IDLE;
 		end
 	end
 
