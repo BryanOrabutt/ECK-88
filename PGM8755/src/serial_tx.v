@@ -1,4 +1,5 @@
-module serial_tx(input clk, rst, tx, new_data, block, output busy, input [7:0] data);
+/* Module credit to embedded micro: https://embeddedmicro.com/ */
+module serial_tx(input clk, rst, new_data, block, output tx, busy, input [7:0] data);
 
     // clog2 is 'ceiling of log base 2' which gives you the number of bits needed to store a value
 	parameter CLK_PER_BIT = 50;

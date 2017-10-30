@@ -1,3 +1,4 @@
+/* Module credit to embedded micro: https://embeddedmicro.com/ */
 module serial_rx(input clk, rst, rx, output [7:0] data, output new_data);
 
     // clog2 is 'ceiling of log base 2' which gives you the number of bits needed to store a value

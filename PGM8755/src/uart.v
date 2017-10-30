@@ -10,7 +10,7 @@
 // Target Devices: 	Spartan 3E Starter Board, Mojo board (Spartan 6 xc6slx9-2tqg144)
 // Description:  	UART to read data from host PC
 //////////////////////////////////////////////////////////////////////////////////
-module uart(input rst, rx, new_tx_data, clk, input[7:0] tx_data, output tx, busy,
+module uart(input rst, rx, new_tx_data, clk, block, input[7:0] tx_data, output tx, busy,
 				new_rx_data, output[7:0] rx_data);
 
 	// CLK_PER_BIT is the number of cycles each 'bit' lasts for
@@ -23,6 +23,6 @@ module uart(input rst, rx, new_tx_data, clk, input[7:0] tx_data, output tx, busy
 					.data(rx_data), .new_data(new_rx_data));
 
 	serial_tx #(.CLK_PER_BIT(CLK_PER_BIT)) uart_tx(.clk(clk), .rst(rst), .tx(tx),
-					.block(1'b0), .busy(busy), .data(tx_data), .new_data(new_tx_data));
+					.block(block), .busy(busy), .data(tx_data), .new_data(new_tx_data));
 
 endmodule
