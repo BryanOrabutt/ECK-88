@@ -1,4 +1,4 @@
-update=10/23/2017 1:46:20 AM
+update=11/30/2017 10:10:51 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -72,6 +72,18 @@ LibName42=smd_resistors
 LibName43=smd_transistors
 LibName44=sockets
 LibName45=valves
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=Libraries/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=C:/Users/Bryan Orabutt/Documents/KiCad/Libraries;Libraries
@@ -108,15 +120,4 @@ LibName29=valves
 LibName30=xilinx
 LibName31=Darlington
 LibName32=regulators
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=Libraries/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
-[general]
-version=1
+LibName33=Libraries/buck
