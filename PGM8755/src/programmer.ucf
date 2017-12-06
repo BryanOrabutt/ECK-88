@@ -18,6 +18,7 @@ NET "led<1>" LOC = P133;
 NET "rx" LOC = P50;
 NET "tx" LOC = P51;
 NET "en" LOC = P35;
+NET "mode" LOC= P40;
 NET "pce" LOC = P33;
 NET "rd" LOC = P30;
 NET "vdd_25" LOC = P27;

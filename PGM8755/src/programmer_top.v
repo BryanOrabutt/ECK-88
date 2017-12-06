@@ -33,7 +33,7 @@
 //				when data is being latched or read.
 //////////////////////////////////////////////////////////////////////////////////
 module programmer_top(input clk, rst_n, rx, mode, en, output tx, pce, rd, vdd_25, vdd_5, 
-					  ale, output[1:0]led, output[10:0] address);
+					  ale, output[1:0]led, inout[10:0] address);
 
 	wire rst = ~rst_n; // make reset active high
 
