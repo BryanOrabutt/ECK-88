@@ -13,7 +13,7 @@ to aid in both educational and demonstrational use. These new additions are outl
 
 ## Modification
 
-If you wish to make any modifications to the current board, all of the files are designed in KiCAD. The KiCAD software can be obtained here: http://kicad-pcb.org/. All of the
+If you wish to make any modifications to the current board, all of the files are designed in KiCAD. The KiCAD software can be obtained here: http://kicad.org/. All of the
 custom symbols and footprints are found in the Libraries and Libraries.pretty folders and will need to be manually added to the KiCAD library search path. The board was
 designed to meet the requirements of OSH Park's fabrication rules. For more information see: http://docs.oshpark.com/design-tools/kicad/
 
